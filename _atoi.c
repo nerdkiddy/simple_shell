@@ -39,8 +39,11 @@ int is_delim(char c, char *delim)
 int _isalpha(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+
 		return (1);
+
 	else
+
 		return (0);
 }
 
@@ -57,13 +60,16 @@ int _atoi(char *s)
 	unsigned int result = 0;
 
 	for (i = 0;  s[i] != '\0' && flag != 2; i++)
+
 	{
 		if (s[i] == '-')
 
 			sign *= -1;
 
 		if (s[i] >= '0' && s[i] <= '9')
+
 		{
+
 			flag = 1;
 
 			result *= 10;
@@ -74,6 +80,7 @@ int _atoi(char *s)
 		else if (flag == 1)
 
 			flag = 2;
+
 	}
 
 	if (sign == -1)
@@ -85,5 +92,4 @@ int _atoi(char *s)
 		output = result;
 
 	return (output);
-
 }
